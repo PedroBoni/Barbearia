@@ -16,6 +16,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--main-white);
     display: flex;
@@ -136,7 +139,7 @@ main #about #facade img{
 }
 main #barbers{
     display: flex;
-    max-width: 68%;
+    width: 68%;
     margin: 0 auto;
     height: 350px;
     margin-top: 5px;
@@ -205,6 +208,10 @@ main #services>div>div:last-child{
 }
 main #services>div>div:last-child img{
     width: 80%;
+    transition: 500ms;
+}
+main #services>div>div:last-child img:hover{
+    transform: perspective(900px) rotateY(15deg) rotateX(20deg);
 }
 main #localization{
     display: flex;
@@ -225,42 +232,85 @@ main #localization>div{
 }
 main #localization>div:first-child{
     margin-right: 5px;
+    padding: 20px 90px;
 }
 main #localization>div:first-child p{
     font-size: 3vh;
     margin-top: 3px;
+    text-align: left;
 }
 main #localization>div:first-child span{
     font-size: 2vh;
+    text-align: right
 }
-main #localization>div:last-child .social{
-    display: flex;
-    width: 120px;
-    height: 40px;
-    justify-content: space-between;
-    align-items: stretch;
-    margin: 0 auto;
-    margin-top: 40px;
-}
-main #localization>div:last-child h1{
-
-}
-main #localization>div:last-child h3{
+main #localization>div:last-child{
     
 }
+main #localization>div:last-child h1{
+    margin-bottom: 20px;
+}
+
 main #localization>div:last-child p{
     
 }
 main #localization>div:last-child a{
-    
+   color: var(--main-white); 
+   margin-bottom: 30px;
 }
-main #localization>div:last-child .social img{
+.social{
+    display: flex;
+    width: 150px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: initial;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.social img{
     height:  100%;
+    cursor: pointer;
+    transition: 500ms;
 }
-main #localization>div:last-child .social img:nth-child(2){
+.social img:hover{
+    transform: perspective(30px) rotateY(20deg) rotateX(10deg);
+}
+.social img:nth-child(2){
     height:  90%;
 }
 /*FOOTER*/
 footer{
-    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 130px;
+    background-color: var(--main-black);
+    margin: 30px 0 0 0;
+    text-align: center;
+    justify-content: center;
+    font-family: Roboto Slab,Serif;
+}
+footer address h3{
+    font-family: sans-serif;
+    color: var(--main-white);
+}
+footer address a{
+    color: var(--main-white);
+    font-weight: 800;
+    font-size: 3vh;
+    text-decoration: none;
+}
+footer address:nth-child(2) div{
+    background-color: var(--main-white);
+}
+footer address:nth-child(2) div a{
+    color: var(--main-black);
+}
+footer .social{
+    margin: 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 68%;
+    margin: 0 auto;
 }
